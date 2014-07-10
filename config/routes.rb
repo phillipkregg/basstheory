@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
   
-  resources :chords
+  get '/chords/chord', to: 'chords#chord'
+  get '/chords/chord_notes', to: 'chords#chord_notes'
   
   get '/scales/:id', to: 'scales#scale'
   get '/scales/:id/notes', to: 'scales#scale_notes'

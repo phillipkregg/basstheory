@@ -15,4 +15,6 @@
 //= require turbolinks
 //= require jquery
 //= require bootstrap-sprockets
+//= require emberjs/handlebars-1.1.2
+//= require emberjs/ember-1.5.1
 //= require_tree .

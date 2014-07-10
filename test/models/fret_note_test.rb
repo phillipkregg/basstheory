@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: notes
+# Table name: fret_notes
 #
 #  id         :integer          not null, primary key
-#  name       :string(255)
-#  quality    :string(255)
-#  octave     :string(255)
+#  fret_id    :integer
+#  note_id    :integer
 #  created_at :datetime
 #  updated_at :datetime
 #
 
 require 'test_helper'
 
-class NoteTest < ActiveSupport::TestCase
+class FretNoteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

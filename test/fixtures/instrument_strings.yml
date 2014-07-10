@@ -1,11 +1,9 @@
 # == Schema Information
 #
-# Table name: notes
+# Table name: instrument_strings
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  quality    :string(255)
-#  octave     :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
@@ -14,8 +12,6 @@
 
 one:
   name: MyString
-  quality: MyString
 
 two:
   name: MyString
-  quality: MyString

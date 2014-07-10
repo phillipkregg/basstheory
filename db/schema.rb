@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140629003141) do
+ActiveRecord::Schema.define(version: 20140710023601) do
 
   create_table "chord_notes", force: true do |t|
     t.integer  "chord_id"
@@ -27,9 +27,29 @@ ActiveRecord::Schema.define(version: 20140629003141) do
     t.datetime "updated_at"
   end
 
+  create_table "fret_notes", force: true do |t|
+    t.integer  "fret_id"
+    t.integer  "note_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "frets", force: true do |t|
+    t.string   "fret_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "instrument_strings", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "notes", force: true do |t|
     t.string   "name"
     t.string   "quality"
+    t.string   "octave"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,6 +64,21 @@ ActiveRecord::Schema.define(version: 20140629003141) do
   create_table "scales", force: true do |t|
     t.string   "name"
     t.string   "quality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "string_frets", force: true do |t|
+    t.string   "note_name"
+    t.integer  "instrument_string_id"
+    t.integer  "fret_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "string_notes", force: true do |t|
+    t.integer  "string_id"
+    t.integer  "note_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,18 +1,16 @@
 # == Schema Information
 #
-# Table name: notes
+# Table name: instrument_strings
 #
 #  id         :integer          not null, primary key
 #  name       :string(255)
-#  quality    :string(255)
-#  octave     :string(255)
 #  created_at :datetime
 #  updated_at :datetime
 #
 
 require 'test_helper'
 
-class NoteTest < ActiveSupport::TestCase
+class InstrumentStringTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
